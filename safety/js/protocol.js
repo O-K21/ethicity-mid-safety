@@ -60,7 +60,7 @@
 
   function rowsOf(doc) {
     var p = doc.policy, f = doc.policyFirst;
-    function was(k, label) { return f[k] !== p[k] ? ' (처음: ' + label(f[k]) + ')' : ''; }
+    function was(k, label) { return f[k] !== p[k] ? ' (처음 기준: ' + label(f[k]) + ')' : ''; }
     return [
       ['경증 환자', C.LEVEL[p.mild].label + was('mild', function (v) { return C.LEVEL[v].label; })],
       ['중증 환자', C.LEVEL[p.severe].label + was('severe', function (v) { return C.LEVEL[v].label; })],
